@@ -3,7 +3,6 @@ package starter.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-import org.openqa.selenium.By;
 
 public class LoginPage extends PageObject {
 
@@ -11,7 +10,7 @@ public class LoginPage extends PageObject {
     private WebElementFacade pageTitle;
 
     @FindBy(id = "user-name")
-    private  WebElementFacade userNameInput;
+    private WebElementFacade userNameInput;
 
     @FindBy(id = "password")
     private WebElementFacade passwordInput;
@@ -34,7 +33,6 @@ public class LoginPage extends PageObject {
     public void insertUsername(String username) {
         userNameInput.sendKeys(username);
     }
-
 
 
 }

@@ -2,6 +2,7 @@ package starter.acceptancetests;
 
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,7 +28,8 @@ public class WhenLoginOnTest {
 
         loginActions.login("https://www.saucedemo.com/", UserType.STANDARD_USER);
 
-        Assertions.assertTrue(loginPage.getTitle().contains("Products"));
+        Serenity.reportThat("Title of the page should be Products",
+                ()-> Assertions.assertTrue(loginPage.getTitle().contains("Products")));
     }
 
 

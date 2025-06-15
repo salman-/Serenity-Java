@@ -9,7 +9,7 @@ public class LoginActions extends UIInteractionSteps {
 
     LoginPage loginPage;
 
-    @Step("Login as {0}")
+    @Step("Login as {1}")
     public void login(String url, UserType user) {
         openUrl(url);
         loginPage.insertUsername(user.getUsername());

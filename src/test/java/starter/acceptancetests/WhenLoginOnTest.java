@@ -11,7 +11,7 @@ import starter.pages.LoginPage;
 import starter.utility.UserType;
 
 @ExtendWith(SerenityJUnit5Extension.class)
-public class WhenLogin extends GeneralWebTest {
+public class WhenLoginOnTest extends GeneralWebTest {
 
     @Steps
     LoginActions loginActions;

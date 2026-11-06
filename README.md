@@ -10,7 +10,6 @@ A UI test automation project built with Serenity BDD and JUnit 5. The sample tes
    - [What problem does it solve?](#what-problem-does-it-solve)
    - [How does it work?](#how-does-it-work)
    - [Serenity and the Page Object Model](#serenity-and-the-page-object-model)
-   - [Other essentials](#other-essentials)
 4. [Running the tests](#running-the-tests)
 5. [Reports](#reports)
 
@@ -104,21 +103,7 @@ public void userCanLogOnViaHomePage() {
 }
 ```
 
-If a locator changes, you only update the Page Object. The steps and tests stay the same.
-
-### Other essentials
-
-| Topic | What to know |
-|---|---|
-| `serenity.conf` | One place for settings: browser, headless mode, screenshots, base URL (see `src/test/resources`) |
-| `WebElementFacade` | Use it instead of `WebElement`. It has helpers such as `isVisible()`, `waitUntilClickable()` and `getText()` |
-| Screenshots | `serenity.take.screenshots`: `FOR_FAILURES`, `FOR_EACH_ACTION`, `AFTER_EACH_STEP` and so on |
-| `Serenity.reportThat(...)` | Adds a named assertion to the report as its own step |
-| Tags | Group tests with `@Tag("smoke")` and run only those with `mvn verify -Dgroups=smoke` |
-| Environments | Define `environments { dev {...} staging {...} }` in `serenity.conf` and choose one with `-Denvironment=staging` |
-| Screenplay pattern | Serenity's alternative to Page Objects, built around Actors, Tasks and Questions. It works well for large test suites |
-
-Learn more in the [Serenity BDD documentation](https://serenity-bdd.github.io/docs/).
+If a locator changes, you only update the Page Object. The steps and tests stay the same. Learn more in the [Serenity BDD documentation](https://serenity-bdd.github.io/docs/).
 
 ## Running the tests
 
